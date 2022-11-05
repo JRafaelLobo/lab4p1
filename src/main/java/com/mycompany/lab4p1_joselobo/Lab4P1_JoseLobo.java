@@ -87,20 +87,17 @@ public class Lab4P1_JoseLobo {
             snum2 = String.valueOf(cnum2);
             num2 = Integer.parseInt(snum2);
             int respuestanum2 = num1 + num2 + num3;
-            if (respuestanum2>1){
-                num3+=1;
+            if (respuestanum2>=2){
+                num3=1;
             }//sumra 
-            if (num1+num2<2&&respuestanum2>1){
-                num3=num3-(num1+num2);
-            }
-            if (respuestanum2 >= 3) {
-                num3=num3-(num1+num2);
+            else{
+                num3=0;
             }
             respuestanum = respuestanum2 % 2;
             respuesta = String.valueOf(respuestanum);
             respuestaacum += respuesta;
-            System.out.println(num3);
         }//for
+        respuestaacum += num3;
         String acum2="";
         for (int i = respuestaacum.length()-1;i>=0;i--){
             char letra = respuestaacum.charAt(i);
